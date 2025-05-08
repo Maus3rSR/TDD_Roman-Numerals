@@ -1,21 +1,21 @@
 import { test, expect } from 'vitest';
 
 function romanianToDecimal(romanian: string): number {
-  let finalNumber = 1;
+  let finalNumber = 0;
 
   if (romanian === 'I') {
-    return finalNumber;
+    finalNumber = 1;
   }
 
   if (romanian === 'II') {
-    return finalNumber + 1;
+    return 1 + 1;
   }
 
   if (romanian === 'III') {
-    return finalNumber + finalNumber + 1;
+    return 1 + 1 + 1;
   }
 
-  return 0;
+  return finalNumber;
 }
 
 test.each([
