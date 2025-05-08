@@ -9,16 +9,6 @@ function romanianToDecimal(romanian: string): number {
     i += 1;
   }
 
-  if (romanian[i] === 'I') {
-    finalNumber += 1;
-    i += 1;
-  }
-
-  if (romanian[i] === 'I') {
-    finalNumber += 1;
-    i += 1;
-  }
-
   return finalNumber;
 }
 
