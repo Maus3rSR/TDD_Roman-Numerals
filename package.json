@@ -4,9 +4,9 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "tdd:green": "git gamble --green -- pnpm run test:once",
-    "tdd:red": "git gamble --red -- pnpm run test:once",
-    "tdd:refactor": "git gamble --refactor -- pnpm run test:once",
+    "tdd:green": "git gamble -m 'green' --green -- pnpm run test:once",
+    "tdd:red": "git gamble -m 'red' --red -- pnpm run test:once",
+    "tdd:refactor": "git gamble -m 'refactor' --refactor -- pnpm run test:once",
     "test": "vitest",
     "test:once": "vitest run",
     "test:ui": "vitest --ui"
