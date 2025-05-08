@@ -21,12 +21,6 @@ function romanianToDecimal(romanian: string): number {
     } else if (map[c]) {
       finalNumber += map[c];
       index++;
-    } else if (c === 'V') {
-      finalNumber += map[c];
-      index++;
-    } else if (c === 'I') {
-      finalNumber += map[c];
-      index++;
     } else {
       throw new Error('Invalid Romanian');
     }
