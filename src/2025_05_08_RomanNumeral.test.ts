@@ -6,6 +6,7 @@ function romanianToDecimal(romanian: string): number {
 
   while (romanian[index]) {
     const c = romanian[index];
+
     if (c === 'I' && romanian[index + 1] === 'V') {
       finalNumber += 4;
       index++;
