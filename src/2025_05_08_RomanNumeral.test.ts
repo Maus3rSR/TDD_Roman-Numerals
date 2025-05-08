@@ -9,14 +9,14 @@ function romanianToDecimal(romanian: string): number {
 
     if (c === 'I' && romanian[index + 1] === 'V') {
       finalNumber += 4;
-      index++;
+      index += 2;
     } else if (c === 'V') {
       finalNumber += 5;
+      index++;
     } else {
       finalNumber += 1;
+      index++;
     }
-
-    index++;
   }
 
   return finalNumber;
