@@ -1,8 +1,10 @@
 import { test, expect } from 'vitest';
 
 function romanianToDecimal(romanian: string): number {
+  let finalNumber = 1;
+
   if (romanian === 'I') {
-    return 1;
+    return finalNumber;
   }
 
   if (romanian === 'II') {
