@@ -1,6 +1,11 @@
 import { test, expect } from 'vitest';
 
 function romanianToDecimal(romanian: string): number {
+  const map = {
+    I: 1,
+    V: 5,
+    X: 10,
+  };
   let finalNumber = 0;
   let index = 0;
 
@@ -14,13 +19,13 @@ function romanianToDecimal(romanian: string): number {
       finalNumber += 9;
       index += 2;
     } else if (c === 'X') {
-      finalNumber += 10;
+      finalNumber += map[c];
       index++;
     } else if (c === 'V') {
-      finalNumber += 5;
+      finalNumber += map[c];
       index++;
     } else if (c === 'I') {
-      finalNumber += 1;
+      finalNumber += map[c];
       index++;
     } else {
       throw new Error('Invalid Romanian');
