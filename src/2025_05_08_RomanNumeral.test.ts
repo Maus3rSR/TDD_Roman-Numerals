@@ -17,7 +17,7 @@ function romanianToDecimal(romanian: string): number {
     const c = romanian[index];
     const nextC = romanian[index + 1];
 
-    if (c !== nextC && map[nextC]) {
+    if (c !== nextC && map[c] < map[nextC] && map[nextC]) {
       finalNumber += map[nextC] - map[c];
       index += 2;
     } else if (map[c]) {
@@ -47,6 +47,7 @@ test.each([
   ['CD', 400],
   ['M', 1000],
   ['CM', 900],
+  ['CL', 150],
 ])('%s should give %s', (input, expected) => {
   expect(romanianToDecimal(input)).toBe(expected);
 });
