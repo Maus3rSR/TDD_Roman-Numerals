@@ -31,6 +31,8 @@ test.each([
   ['V', 5],
   ['IV', 4],
   ['VI', 6],
+  ['VII', 7],
+  ['VIII', 8],
 ])('%s should give %s', (input, expected) => {
   expect(romanianToDecimal(input)).toBe(expected);
 });
