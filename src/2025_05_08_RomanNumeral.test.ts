@@ -11,11 +11,12 @@ function romanianToDecimal(romanian: string): number {
 
   while (romanian[index]) {
     const c = romanian[index];
+    const nextC = romanian[index + 1];
 
-    if (c === 'I' && romanian[index + 1] === 'V') {
+    if (c === 'I' && nextC === 'V') {
       finalNumber += 4;
       index += 2;
-    } else if (c === 'I' && romanian[index + 1] === 'X') {
+    } else if (c === 'I' && nextC === 'X') {
       finalNumber += 9;
       index += 2;
     } else if (map[c]) {
