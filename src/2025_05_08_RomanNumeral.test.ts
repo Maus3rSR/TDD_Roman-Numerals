@@ -2,20 +2,19 @@ import { test, expect } from 'vitest';
 
 function romanianToDecimal(romanian: string): number {
   let finalNumber = 0;
-  let previousLetter: string = '';
   let index = 0;
 
   while (romanian[index]) {
     const c = romanian[index];
-    if (c === 'V' && previousLetter === 'I') {
-      finalNumber += 3;
+    if (c === 'I' && romanian[index + 1] === 'V') {
+      finalNumber += 4;
+      index++;
     } else if (c === 'V') {
       finalNumber += 5;
     } else {
       finalNumber += 1;
     }
 
-    previousLetter = c;
     index++;
   }
 
