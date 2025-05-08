@@ -4,7 +4,7 @@ function romanianToDecimal(romanian: string): number {
   let finalNumber = 0;
 
   if (romanian === 'I') {
-    finalNumber = 1;
+    finalNumber += 1;
   }
 
   if (romanian === 'II') {
