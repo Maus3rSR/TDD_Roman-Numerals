@@ -4,15 +4,15 @@ function romanianToDecimal(romanian: string): number {
   let finalNumber = 0;
 
   if (romanian[0] === 'I') {
-    finalNumber = 1;
+    finalNumber += 1;
   }
 
   if (romanian[1] === 'I') {
-    finalNumber = 2;
+    finalNumber += 1;
   }
 
   if (romanian[2] === 'I') {
-    finalNumber = 3;
+    finalNumber += 1;
   }
 
   return finalNumber;
