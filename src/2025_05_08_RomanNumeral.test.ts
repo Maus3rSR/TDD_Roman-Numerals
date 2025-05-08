@@ -6,11 +6,11 @@ function romanianToDecimal(romanian: string): number {
   }
 
   if (romanian === 'II') {
-    return 2;
+    return 1 + 1;
   }
 
   if (romanian === 'III') {
-    return 3;
+    return 1 + 1 + 1;
   }
 
   return 0;
