@@ -13,8 +13,8 @@ function romanianToDecimal(romanian: string): number {
     const c = romanian[index];
     const nextC = romanian[index + 1];
 
-    if (c === 'I' && nextC === 'V') {
-      finalNumber += 4;
+    if (c === 'I' && nextC !== 'I' && map[nextC]) {
+      finalNumber += map[nextC] - map[c];
       index += 2;
     } else if (c === 'I' && nextC !== 'I' && map[nextC]) {
       finalNumber += map[nextC] - map[c];
