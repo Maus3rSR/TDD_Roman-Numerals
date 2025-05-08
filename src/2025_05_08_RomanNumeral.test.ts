@@ -2,16 +2,19 @@ import { test, expect } from 'vitest';
 
 function romanianToDecimal(romanian: string): number {
   let finalNumber = 0;
+  let i = 0;
 
-  if (romanian[0] === 'I') {
+  if (romanian[i] === 'I') {
     finalNumber += 1;
   }
 
-  if (romanian[1] === 'I') {
+  i = 1;
+  if (romanian[i] === 'I') {
     finalNumber += 1;
   }
 
-  if (romanian[2] === 'I') {
+  i = 2;
+  if (romanian[i] === 'I') {
     finalNumber += 1;
   }
 
