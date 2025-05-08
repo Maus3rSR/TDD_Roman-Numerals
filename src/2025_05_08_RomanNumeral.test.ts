@@ -5,10 +5,14 @@ function romanianToDecimal(romanian: string): number {
 
   if (romanian === 'I') {
     finalNumber = 1;
-  } else if (romanian === 'II') {
-    finalNumber = 1 + 1;
-  } else if (romanian === 'III') {
-    finalNumber = 1 + 1 + 1;
+  }
+
+  if (romanian === 'II') {
+    finalNumber = 2;
+  }
+
+  if (romanian === 'III') {
+    finalNumber = 3;
   }
 
   return finalNumber;
