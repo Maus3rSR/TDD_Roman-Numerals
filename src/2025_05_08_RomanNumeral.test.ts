@@ -11,9 +11,9 @@ function romanianToDecimal(romanian: string): number {
 
   if (romanian[i] === 'I') {
     finalNumber += 1;
+    i += 1;
   }
 
-  i = 2;
   if (romanian[i] === 'I') {
     finalNumber += 1;
   }
