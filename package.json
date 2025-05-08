@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "index.js",
   "scripts": {
-    "test": "vitest"
+    "tdd:green": "git gamble --green -- pnpm run test:once",
+    "tdd:red": "git gamble --red -- pnpm run test:once",
+    "tdd:refactor": "git gamble --refactor -- pnpm run test:once",
+    "test": "vitest",
+    "test:once": "vitest run",
+    "test:ui": "vitest --ui"
   },
   "keywords": [],
   "author": "",
