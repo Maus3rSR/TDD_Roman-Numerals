@@ -18,7 +18,7 @@ function romanianToDecimal(romanian: string): number {
     } else if (c === 'I' && romanian[index + 1] === 'X') {
       finalNumber += 9;
       index += 2;
-    } else if (c === 'X') {
+    } else if (map[c]) {
       finalNumber += map[c];
       index++;
     } else if (c === 'V') {
