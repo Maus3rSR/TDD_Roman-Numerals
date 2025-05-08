@@ -12,7 +12,7 @@ function romanianToDecimal(romanian: string): number {
   }
 
   if (romanian === 'III') {
-    return 1 + 1 + 1;
+    return finalNumber + 1 + 1;
   }
 
   return 0;
