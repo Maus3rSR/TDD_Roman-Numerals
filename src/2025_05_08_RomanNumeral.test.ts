@@ -10,6 +10,9 @@ function romanianToDecimal(romanian: string): number {
     if (c === 'I' && romanian[index + 1] === 'V') {
       finalNumber += 4;
       index += 2;
+    } else if (c === 'X') {
+      finalNumber += 10;
+      index++;
     } else if (c === 'V') {
       finalNumber += 5;
       index++;
@@ -33,6 +36,7 @@ test.each([
   ['VI', 6],
   ['VII', 7],
   ['VIII', 8],
+  ['X', 10],
 ])('%s should give %s', (input, expected) => {
   expect(romanianToDecimal(input)).toBe(expected);
 });
