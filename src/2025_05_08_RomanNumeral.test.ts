@@ -13,9 +13,11 @@ function romanianToDecimal(romanian: string): number {
     } else if (c === 'V') {
       finalNumber += 5;
       index++;
-    } else {
+    } else if (c === 'I') {
       finalNumber += 1;
       index++;
+    } else {
+      throw new Error('Invalid Romanian');
     }
   }
 
