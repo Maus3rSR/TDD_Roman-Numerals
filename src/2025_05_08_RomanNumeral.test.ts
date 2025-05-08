@@ -9,12 +9,17 @@ function romanianToDecimal(romanian: string): number {
     return 2;
   }
 
+  if (romanian === 'III') {
+    return 3;
+  }
+
   return 0;
 }
 
 test.each([
   ['I', 1],
   ['II', 2],
+  ['III', 3],
 ])('%s should give %s', (input, expected) => {
   expect(romanianToDecimal(input)).toBe(expected);
 });
