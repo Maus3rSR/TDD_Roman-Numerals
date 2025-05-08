@@ -6,7 +6,7 @@ function romanianToDecimal(romanian: string): number {
   if (romanian === 'I') {
     finalNumber = 1;
   } else if (romanian === 'II') {
-    return 2;
+    finalNumber = 2;
   } else if (romanian === 'III') {
     return 3;
   }
