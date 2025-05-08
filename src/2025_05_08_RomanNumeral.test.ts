@@ -20,6 +20,9 @@ function romanianToDecimal(romanian: string): number {
     if (c === 'I' && nextC !== 'I' && map[nextC]) {
       finalNumber += map[nextC] - map[c];
       index += 2;
+    } else if (c !== nextC && map[nextC]) {
+      finalNumber += map[nextC] - map[c];
+      index += 2;
     } else if (map[c]) {
       finalNumber += map[c];
       index++;
@@ -40,6 +43,7 @@ test.each([
   ['X', 10],
   ['IX', 9],
   ['L', 50],
+  ['XL', 40],
   ['C', 100],
   ['D', 500],
   ['M', 1000],
