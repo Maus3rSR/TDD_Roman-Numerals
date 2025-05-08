@@ -45,8 +45,11 @@ test.each([
   ['L', 50],
   ['XL', 40],
   ['C', 100],
+  ['XC', 90],
   ['D', 500],
+  ['CD', 400],
   ['M', 1000],
+  ['CM', 900],
 ])('%s should give %s', (input, expected) => {
   expect(romanianToDecimal(input)).toBe(expected);
 });
